@@ -1,12 +1,13 @@
-# Hand-Tracking Color Mixer
+# Hand Tracking Color Mixer
+![Hand-Tracking Color Mixer demo](assets/demo.gif)
 
-A real-time computer vision project that uses MediaPipe’s 21-point hand-landmark model to track finger positions through a webcam and convert fingertip distances into dynamic RGB color values.  
+With this project, your hand becomes a live color mixer. Using your webcam, the app tracks your fingers via MediaPipe’s 21-point hand landmark detection. As you move or spread your fingers, it monitors three key distances—thumb to index, index to middle, and middle to ring. Each of these distances adjusts one of the RGB color channels, letting you control color just by moving your hand. The displayed color updates instantly and transitions remain smooth without flickering.
 
-As you move or spread your fingers, the program measures three key distances—thumb–index, index–middle, and middle–ring—and maps them to the Red, Green, and Blue channels. The resulting mixed color is displayed live on screen along with smooth transitions to reduce jitter.  
+Here’s how it works:
+- Real-time video frames are captured using OpenCV.
+- MediaPipe identifies your hand and locates all landmarks.
+- The distances between fingertips are mapped directly to RGB values.
+- You see both a live overlay and a color swatch on the video feed.
+- Simple smoothing techniques keep the color steady as your hand moves.
 
-This project demonstrates the basics of:
-- Live webcam frame processing using OpenCV  
-- Hand-landmark extraction using MediaPipe  
-- Mapping geometric features (distances) to visual outputs  
-- Drawing UI overlays and color swatches on video frames  
-- Simple smoothing techniques for stable real-time visual feedback
+This is a straightforward and interactive demonstration of computer vision and real-time feedback.
